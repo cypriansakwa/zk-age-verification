@@ -16,14 +16,14 @@ An example repo to verify Noir circuits (with bb backend) using a Solidity verif
 
 Tested with Noir 1.0.0-beta.3 and bb 0.82.2
 ### 🔹 Prerequisites Section
-```markdown
+
 - [Noir 1.0.0-beta.3](https://github.com/noir-lang/noir)
 - `bb` CLI version 0.82.2
 - [Foundry](https://book.getfoundry.sh/)
 - Node.js >= 18
 - Yarn (`npm install -g yarn`)
 
-```
+
 ### 🔹 Example Use Case or Circuit Summary
 - Circuit Logic
 The circuit checks:
