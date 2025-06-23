@@ -1,3 +1,11 @@
+# 🔐 zk-Age Verification in Noir
+
+This project demonstrates a zero-knowledge circuit that verifies whether a user's **private age** meets a **public minimum age threshold** without revealing the actual age.
+
+It integrates:
+- A Noir circuit
+- Proof generation via `bb.js` and `bb` CLI
+- Solidity verifier tested with Foundry
 ### Introduction
 
 An example repo to verify Noir circuits (with bb backend) using a Solidity verifier.
@@ -7,6 +15,27 @@ An example repo to verify Noir circuits (with bb backend) using a Solidity verif
 - `/js` - JS code to generate proof and save as a file.
 
 Tested with Noir 1.0.0-beta.3 and bb 0.82.2
+### 🔹 Prerequisites Section
+```markdown
+- [Noir 1.0.0-beta.3](https://github.com/noir-lang/noir)
+- `bb` CLI version 0.82.2
+- [Foundry](https://book.getfoundry.sh/)
+- Node.js >= 18
+- Yarn (`npm install -g yarn`)
+
+```
+### 🔹 Example Use Case or Circuit Summary
+- Circuit Logic
+The circuit checks:
+```markdown
+if age ≥ minimum_age {
+flag = 1
+} else {
+flag = 0
+}
+```
+Only the result (`flag`) is revealed publicly; the actual age remains private.
+
 
 ### Installation / Setup
 ```ssh
@@ -63,5 +92,7 @@ echo "[\"$SPLIT_HEX_PUBLIC_INPUTS\"]" > ./target/public-inputs
 cd ..
 (cd contract && forge test --optimize --optimizer-runs 5000 --gas-report -vvv)
 ```
+### 🔹 4. License
 
+This project is licensed under the [MIT License](LICENSE).
 
